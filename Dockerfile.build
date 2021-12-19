@@ -6,10 +6,6 @@ RUN npm install
 EXPOSE 3000
 RUN npm run build
 
-# RUN npm run build
-
-# docker run --name svelte_template -it -p 80:80 --rm $(docker build -q -f Dockerfile.build .)
-
 
 FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
