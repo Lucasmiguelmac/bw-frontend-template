@@ -32,5 +32,5 @@ build-image-job:
         - ln -s /usr/local/bin/heroku /usr/bin/heroku
     script:
         - heroku container:login
-        - heroku container:push --app w3-python web
-        - heroku container:release --app w3-python web
+        - heroku container:push --app svelte-template web
+        - heroku container:release --app svelte-template web
