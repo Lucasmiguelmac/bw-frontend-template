@@ -1,28 +1,11 @@
-const svelte = require('@sveltejs/vite-plugin-svelte');
-const { defineConfig } = require('vite');
-const { minify } = require('html-minifier');
 
-const minifyHtml = () => {
-  return {
-    name: 'html-transform',
-    transformIndexHtml(html) {
-      return minify(html, {
-        collapseWhitespace: true,
-      });
-    },
-  };
-};
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { defineConfig } from 'vite';
 
-module.exports = defineConfig(({ mode }) => {
-  const isProduction = mode === 'production';
-
-  return {
-    optimizeDeps: {
-      exclude: ['@roxi/routify'],
+export default defineConfig({
+    server: {
+        port: 5000,
     },
-    plugins: [svelte(), isProduction && minifyHtml()],
-    build: {
-      minify: isProduction,
-    },
-  };
+    
+    plugins: [svelte()],
 });
