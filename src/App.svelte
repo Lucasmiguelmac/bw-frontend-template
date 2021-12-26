@@ -1,10 +1,6 @@
-<script lang="ts">
-    let num = 1;
-    let handleClick = () => {
-        num ++
-    }
+<script>
+  import { Router } from '@roxi/routify';
+  import { routes } from '../.routify/routes';
 </script>
 
-
-<h1>{num}</h1>
-<button on:click={handleClick}>+1</button>
+<Router {routes} />

@@ -10,9 +10,7 @@
 	"dockerFile": "../Dockerfile.dev",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"git.path": "/usr/bin/git"
-	},
+	"settings": {},
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": []
