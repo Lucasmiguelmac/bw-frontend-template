@@ -1,36 +1,19 @@
-# routify-vite-ts
+# Svelte-Template
 
-Use Vite (_Next Generation Frontend Tooling_) & Typescript in Routify. What is Vite? see [Vite](https://vitejs.dev/) for more informations.
+# Description
+Template for developing, deploying and locally-testing Svelte-powered frontends.
 
-## Installation
+# Template Roadmap
+* [x] Template for SPA.
+* [x] Template for Routed Frontend.
+* [ ] Enable component reuse between Web and Mobile apps.
+* [ ] Enable component reuse between Web, Mobile and Wearable apps.
 
-```bash
-npx degit lamualfa/routify-vite-ts project-name
-cd project-name
-npm && npm run dev
-```
 
-<hr>
+## CI/CD docker commands
 
-## Environment
+### Production
+```docker run --name svelte_template -it -p 80:80 --rm $(docker build -q -f Dockerfile.build .)```
 
-- Routify - `v2.15.1`
-- Vite - `v2.2.35`
-- Vite Plugin Svelte - `v1.0.0-next.7`
-
-<hr>
-
-## Demo
-
-See [routify-vite-ts.vercel.app](https://routify-vite-ts.vercel.app/).
-
-<hr>
-
-## Related
-
-- [routify-ts](https://github.com/lamualfa/routify-ts) - Use Typescript in Routify Project.
-- [routify-tailwind](https://github.com/lamualfa/routify-tailwind) - Use Tailwind CSS in Routify.
-- [routify-twind](https://github.com/lamualfa/routify-twind) - Use Twind (Tailwind CSS in JS version) in Routify.
-- [routify-windi](https://github.com/lamualfa/routify-windi) - Use Windi CSS (_Next generation of Tailwind CSS compiler_) in Routify.
-- [routify-carbon](https://github.com/lamualfa/routify-carbon) - Use IBM Carbon Framework in Routify.
-- [routify-vite](https://github.com/lamualfa/routify-vite) Use Vite (_Next Generation Frontend Tooling_) in Routify.
+### Dev
+```docker run --name svelte_template -it -p 3000:3000 -v "$(pwd)/src:/usr/src/app/src" --rm $(docker build -q -f Dockerfile.dev .)```
