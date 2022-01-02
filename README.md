@@ -6,6 +6,7 @@ Template for developing, deploying and locally-testing Svelte-powered frontends.
 # Template Roadmap
 * [x] Template for SPA.
 * [x] Template for Routed Frontend.
+* [ ] Template for PWA.
 * [ ] Enable component reuse between Web and Mobile apps.
 * [ ] Enable component reuse between Web, Mobile and Desktop apps.
 * [ ] Enable component reuse between Web, Mobile, Desktop and Wearable apps.
