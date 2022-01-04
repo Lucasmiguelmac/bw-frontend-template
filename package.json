@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "test": "uvu -r tsm tests",
     "dev": "routify -c dev:vite ",
     "build": "svelte-check && routify -b && vite build",
     "dev:vite": "vite --host",
@@ -14,6 +15,7 @@
     "svelte": "^3.37.0",
     "svelte-check": "^1.5.1",
     "svelte-preprocess": "^4.7.2",
+    "tsm": "^2.2.1",
     "uvu": "^0.5.2",
     "vite": "^2.2.3"
   }
