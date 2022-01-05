@@ -1,1 +1,1 @@
-export type TestParameter = [input: string, expectedOutput: string];
+export type TestParameter = [input: any, expectedOutput: any];
