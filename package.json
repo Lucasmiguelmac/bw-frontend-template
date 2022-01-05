@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "uvu -r tsm src/tests",
+    "test": "uvu -r tsm tests",
     "dev": "routify -c dev:vite ",
     "build": "svelte-check && routify -b && vite build",
     "dev:vite": "vite --host",
