@@ -20,14 +20,28 @@ Template for developing, deploying and locally-testing Svelte-powered frontends.
     * [ ] Toggle TS use
     * [ ] Publish as Svelteplate
 
-## CI/CD docker commands
+<br/>
+<br/>
 
+## After cloning the proyect
+
+Run the following script to configure git hooks:
+```sh
+source ./initial_script.sh
+```
+## Dev
+Run the project:
+```sh
+- docker-compose up
+```
+## CI/CD docker commands
+```sh
+- docker build -t svelte_template_image -f Dockerfile.dev .
+- docker run --name svelte_template -it -p 3000:3000 -v "$(pwd)/src:/usr/src/app/src" svelte_template_image
+```
 ### Production
 ```sh
-docker run --name svelte_template -it -p 80:80 --rm $(docker build -q -f Dockerfile.build .)
+docker run --name svelte_template -it -p 80:80 -v "$(pwd)/src:/usr/src/app/src" --rm $(docker build -q -f Dockerfile.build .)
 ```
 
-### Dev
-```sh
-docker run --name svelte_template -it -p 3000:3000 -v "$(pwd)/src:/usr/src/app/src" --rm $(docker build -q -f Dockerfile.dev .)
-```
+
