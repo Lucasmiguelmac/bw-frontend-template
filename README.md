@@ -15,7 +15,7 @@ Template for developing, deploying and locally-testing Svelte-powered frontends.
     * [ ] Pick a routing solution if any (else: SPA)
     * [ ] Pick unit tests config
         * [ ] Component renderer
-        * [ ] Test runner (uvu, jest, ava, etc.)
+        * [ ] Test runner (uvu vs vitest)
         * [ ] Mocking solution
     * [ ] Toggle TS use
     * [ ] Publish as Svelteplate
